@@ -1,9 +1,14 @@
 class Robot
 
-  attr_accessor :name
+  attr_accessor :name, :weight
+
+  def initialize(name, weight = 10)
+    @name = name
+    @weight = weight
+  end
 
   def say_hi
-    system("say Hi")
+    "Hi"
   end
 
   def say_name
@@ -27,3 +32,17 @@ class ActorUnit < Robot
   end
 
 end
+
+our_class = %w(Sean Marie Isaiah Daniel)
+
+class_robots = []
+
+# our_class.each do |x|
+#   class_robots << Robot.new(x)
+# end
+
+class_robots = our_class.collect{|x| Robot.new(x)}
+
+puts class_robots
+
+puts class_robots[0].name
