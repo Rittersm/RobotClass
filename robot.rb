@@ -35,14 +35,4 @@ end
 
 our_class = %w(Sean Marie Isaiah Daniel)
 
-class_robots = []
-
-# our_class.each do |x|
-#   class_robots << Robot.new(x)
-# end
-
 class_robots = our_class.collect{|x| Robot.new(x)}
-
-puts class_robots
-
-puts class_robots[0].name
